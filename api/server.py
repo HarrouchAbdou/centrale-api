@@ -1,32 +1,53 @@
-from flask import Flask, flash, request, redirect, url_for
+from flask import Flask , flash, request, redirect, url_for,send_file, send_from_directory, safe_join, abort
+
+from flask_cors import CORS, cross_origin
+
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
-from algo import  algo1
-
+from arima import arima
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
+
+cors = CORS(app)
+
 
 
 @app.route('/test', methods=['GET'])
 def home():
     return "this is our first appi "
 
+@cross_origin()
 @app.route('/algo1', methods=['POST' , 'GET'])
 def algo1Handler():
     if request.method == 'POST':
         f = request.files['datafile']
         f.save(secure_filename(f.filename))
-        algo1(f.filename)
-        return 'file uploaded successfully'
+        arima(f.filename)
+
+        return send_file("sent.xlsx",as_attachment=True)
 
 
+@cross_origin()
 @app.route('/algo2',methods=['POST','GET'])
-def algo2():
-    return 'this endpoint will handle the first algo2 '
+def algo2Handler():
+    if request.method == 'POST':
+        f = request.files['datafile']
+        f.save(secure_filename(f.filename))
+        arima(f.filename)
+
+        return send_file("sent.xlsx", as_attachment=True)
 
 
+@cross_origin()
 @app.route('/algo3',methods=['POST','GET'])
-def algo3():
-    return 'this endpoint will handle the first algo3 '
+def algo3Handler():
+    if request.method == 'POST':
+        f = request.files['datafile']
+        f.save(secure_filename(f.filename))
+        arima(f.filename)
+
+        return send_file("sent.xlsx", as_attachment=True)
+
+
 app.run()
