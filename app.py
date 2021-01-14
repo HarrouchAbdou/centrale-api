@@ -10,7 +10,6 @@ from ltsm import ltsmAlgo
 from lissage import  Lissage
 
 app = Flask(__name__)
-app.config["DEBUG"] = True
 
 cors = CORS(app)
 
