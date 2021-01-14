@@ -4,17 +4,8 @@
     <list default="true" id="2bcc1646-36b2-4ffa-bbe1-4bf385099adf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Demand-data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/airline-passengers.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/algo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/arima.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/lissage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ltsm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/predicted.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/sample.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/sent-ltsm.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/sent.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +128,7 @@
       <workItem from="1610502656811" duration="3768000" />
       <workItem from="1610546185098" duration="2896000" />
       <workItem from="1610562151379" duration="440000" />
-      <workItem from="1610636609885" duration="5608000" />
+      <workItem from="1610636609885" duration="5931000" />
     </task>
     <servers />
   </component>
