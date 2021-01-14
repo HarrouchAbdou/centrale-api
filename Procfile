@@ -1,1 +1,1 @@
-web: gunicorn fakeapp:app
+web: gunicorn server:app
