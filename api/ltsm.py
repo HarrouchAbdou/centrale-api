@@ -9,14 +9,10 @@
 # In[3]:
 
 
-import pandas
-import matplotlib.pyplot as plt
 import numpy
-import matplotlib.pyplot as plt
 import pandas
 
 from openpyxl import Workbook
-import time
 
 import math
 from keras.models import Sequential
