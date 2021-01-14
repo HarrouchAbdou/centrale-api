@@ -6,6 +6,10 @@ from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 from arima import arima
 
+from ltsm import ltsmAlgo
+
+from lissage import  Lissage
+
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
@@ -34,9 +38,9 @@ def algo2Handler():
     if request.method == 'POST':
         f = request.files['datafile']
         f.save(secure_filename(f.filename))
-        arima(f.filename)
+        ltsmAlgo(f.filename)
 
-        return send_file("sent.xlsx", as_attachment=True)
+        return send_file("sent-ltsm.xlsx", as_attachment=True)
 
 
 @cross_origin()
@@ -45,9 +49,9 @@ def algo3Handler():
     if request.method == 'POST':
         f = request.files['datafile']
         f.save(secure_filename(f.filename))
-        arima(f.filename)
+        Lissage(f.filename)
 
-        return send_file("sent.xlsx", as_attachment=True)
+        return send_file("predicted.xlsx", as_attachment=True)
 
 
 app.run()
